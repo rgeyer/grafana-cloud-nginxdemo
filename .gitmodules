@@ -1,0 +1,6 @@
+[submodule "docker-nginx"]
+	path = docker-nginx
+	url = https://github.com/nginxinc/docker-nginx.git
+[submodule "static-website-example"]
+	path = static-website-example
+	url = https://github.com/cloudacademy/static-website-example.git

@@ -1,0 +1,25 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker-nginx/modules/Dockerfile
+      args:
+        ENABLED_MODULES: geoip2
+    image: nginx-with-geoip2
+    ports:
+    - "8000:80"
+    volumes:
+    - ./nginx.conf:/etc/nginx/nginx.conf
+    - ./GeoLite2-Country.mmdb:/etc/nginx/geoip/GeoLite2-Country.mmdb
+    - ./static-website-example:/usr/share/nginx/html
+    - logs:/var/log/nginx
+  agent:
+    image: grafana/agent:v0.14.0
+    volumes:
+    - ./agent.yaml:/etc/agent/agent.yaml
+    - logs:/var/log/nginx
+
+
+volumes:
+  logs:
