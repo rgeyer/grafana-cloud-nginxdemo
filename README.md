@@ -1,5 +1,5 @@
 # Grafana Cloud NGINX Integration demo
-This is a quick and easy test environment for the [NGINX](https://grafana.com/docs/grafana-cloud/integrations/integration-nginx/) integration.
+This is a quick and easy test environment for the [NGINX](https://grafana.com/docs/grafana-cloud/integrations/integration-nginx/) integration in Grafana Cloud.
 
 # Prerequistes
 * Git
@@ -12,6 +12,9 @@ This is a quick and easy test environment for the [NGINX](https://grafana.com/do
 * Free [GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) Country geoip database stored as `GeoLite2-Country.mmdb` in the root directory
 
 # Usage
+Clone this repo (and it's submodules);
+`git clone --recurse-submodules https://github.com/rgeyer/grafana-cloud-nginxdemo.git`
+
 Once you have the necessary MetricsPublisher key, username, and URL, you can either set them as environment variables, or you will be prompted for them.
 
 Variable Names;
